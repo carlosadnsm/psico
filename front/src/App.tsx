@@ -1,75 +1,24 @@
-import { useMemo } from 'react';
 import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
 import { Tag } from 'primereact/tag';
-import { Avatar } from 'primereact/avatar';
-import { Chip } from 'primereact/chip';
 import { articles } from './data/articles';
 import juliaProfile from './images/juliaprofile.jpg';
 import './App.css';
 
 function App() {
-  const highlights = useMemo(
-    () => [
-      'Psicanálise com foco em jovens adultos',
-      'Online ou presencial, como você preferir',
-      'Escuta profunda para ansiedade e relações',
-      'Espaço seguro, sem julgamentos',
-    ],
-    [],
-  );
-
   return (
     <div className="page">
       <header className="hero">
-        <div className="hero__content">
-          <Chip label="In Dizer Psicanálise" icon="pi pi-heart" className="hero__pill" />
-          <h1 className="hero__title">Psicanálise acolhedora para jovens adultos que buscam clareza emocional.</h1>
-          <p className="hero__subtitle">
-            Atendimento psicanalítico com escuta profunda e acolhimento real, para jovens adultos que desejam
-            compreender suas emoções e transformar suas relações. Online ou presencial.
-          </p>
-          <div className="hero__actions">
-            <Button label="Agendar sessão" icon="pi pi-calendar" size="large" severity="primary" />
-            <Button label="Entender a abordagem" icon="pi pi-book" size="large" className="p-button-outlined" />
-          </div>
-          <div className="hero__highlights">
-            {highlights.map((item) => (
-              <div key={item} className="hero__highlight">
-                <i className="pi pi-check" />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
+        <div className="hero__image">
+          <img src={juliaProfile} alt="Julia Alves" />
         </div>
-        <div className="hero__card">
-          <Card className="profile-card">
-            <div className="profile-card__header">
-              <Avatar
-                image={juliaProfile}
-                shape="circle"
-                size="xlarge"
-              />
-              <div>
-                <h3>Julia Alves</h3>
-                <p>Psicanalista | CRP 00/0000</p>
-              </div>
-            </div>
-            <p className="profile-card__text">
-              Trabalho com psicanálise voltada para jovens adultos, ajudando a explorar conflitos internos,
-              ansiedade e relações com profundidade e sem pressa.
-            </p>
-            <div className="profile-card__meta">
-              <div>
-                <strong>+250</strong>
-                <span>Sessões realizadas</span>
-              </div>
-              <div>
-                <strong>6 anos</strong>
-                <span>De experiência</span>
-              </div>
-            </div>
-          </Card>
+        <div className="hero__content">
+          <h1 className="hero__title">Julia Alves</h1>
+          <p className="hero__subtitle">Psicanalista</p>
+          <p className="hero__description">
+            Psicanálise para jovens adultos. Escuta profunda, sem pressa.
+            Online ou presencial.
+          </p>
         </div>
       </header>
 
@@ -123,7 +72,6 @@ function App() {
         </div>
         <div className="footer__actions">
           <Button label="WhatsApp" icon="pi pi-whatsapp" severity="success" />
-          <Button label="E-mail" icon="pi pi-envelope" className="p-button-outlined" />
         </div>
       </footer>
     </div>
