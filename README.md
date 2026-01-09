@@ -1,2 +1,3 @@
 # psico
-Rep usado para fazer um site de uma psicologa usando react e python
+Rep usado para fazer um site de uma psicologa usando react e python com django
+
